@@ -9,6 +9,12 @@ RUN yum install -y curl git htop man unzip tmux vim wget zsh openssh-server mysq
 RUN echo 'root' | passwd root --stdin
 RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
 
+# Vimrc
+RUN \
+  git clone git://github.com/amix/vimrc.git ~/.vim_runtime
+  sh ~/.vim_runtime/install_basic_vimrc.sh
+
+# Set ENV
 ENV TERM xterm
 ENV LANG en_US.UTF-8
 ENV LC_CTYPE en_US.UTF-8
