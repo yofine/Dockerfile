@@ -15,6 +15,9 @@ RUN chmod +x ~/.vim_runtime/install_awesome_vimrc.sh
 RUN ~/.vim_runtime/install_awesome_vimrc.sh
 COPY my_configs.vim /root/.vim_runtime/
 
+# Tmux.conf
+COPY tmux.conf /root/.tmux.conf
+
 # Set ENV
 ENV TERM xterm-256color
 ENV LANG en_US.UTF-8
