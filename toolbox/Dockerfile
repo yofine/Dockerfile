@@ -29,6 +29,7 @@ ENV LC_ALL en_US.UTF-8
 ENV NVM_DIR /usr/local/nvm
 ENV NODE_VERSION 6.5.0
 
+RUN bash -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install nvm with node and npm
 RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.31.7/install.sh | bash \
@@ -39,7 +40,5 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.31.7/install.sh | b
 
 ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
-
-RUN bash -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 WORKDIR /root
