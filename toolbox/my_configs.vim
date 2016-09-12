@@ -1,4 +1,6 @@
+set background=dark
 colorscheme peaksea
+set number
 let g:airline_theme="wombat"
 map <c-n> <Esc>:NERDTreeToggle<cr>
 let g:NERDTreeWinPos = "left"
