@@ -1,0 +1,6 @@
+webapp:
+  image: yofine/production:1.0.0
+  ports:
+    - "8000:8000"
+  volumes:
+    - "/data"

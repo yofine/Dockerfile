@@ -1,0 +1,15 @@
+{
+  "Services": {
+    "webapp": {
+      "Image": "yofine/production@sha256:3e1b52a625bfd55d23242b6b46cfa14c89fed14158da2ce67f2d8742d00c634d", 
+      "Networks": [], 
+      "Ports": [
+        {
+          "Port": 8000, 
+          "Protocol": "tcp"
+        }
+      ]
+    }
+  }, 
+  "Version": "0.1"
+}
